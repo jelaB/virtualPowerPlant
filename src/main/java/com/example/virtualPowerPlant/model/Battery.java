@@ -34,7 +34,6 @@ public class Battery {
 	}
 
 	public Battery(String name, int postcode, double wattCapacity) {
-		super();
 		this.name = name;
 		this.postcode = postcode;
 		this.wattCapacity = wattCapacity;
