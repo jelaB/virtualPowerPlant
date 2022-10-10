@@ -14,9 +14,9 @@ Application provides two endpoints:\
 
 ## Additional comments
 
-Tests defined for this application are divided based on the component where belongs. Since the number of functionalities is small, the test is organized based on the default components of the app which have a more significant role in the current app logic. One test file refers to the functionalities within the repository, and another within controller. \
-In the test procedures designed for testing repo component, every object was Mocked, since that is more clean approach in process of testing, and also because functionalities in all other components rely on the correctness of this part of app.
-For testing methods defined in the controller, objects were not mocked, activities over the database were performed, and objects inserted during that were not deleted. Considering app configuration in the application.properties, this also may be considered as ok approach, since database will be recreated on every app start, and after testing is finished, all performed actions will be removed because of that. So, in this case, the side-effect will not be caused. In more serious application, in case when mocking of objects is not applied for some reason, after test is finished, all changes supposed to be removed within code.
+Tests defined for this application are divided based on the component where belongs. One test file refers to the functionalities within the repository, and another within controller. \
+In the test procedures designed for testing repo component, every object is Mocked, since that is more clean approach in process of testing, and also because functionalities in all other components rely on the correctness of this part of app.
+For testing methods defined in the controller, objects are not mocked, activities over the database were performed, and objects inserted during test were not deleted explicitly. Considering app configuration in the application.properties, this also may be seen as ok approach, since database will be recreated on every app start, and after testing is finished, all performed actions will be removed because of that. So, in this case, the side-effect will not be caused. In more serious application, in case when mocking of objects is not applied for some reason, after test is finished, all changes supposed to be removed within code.
 
 ## Endpoints for testing
 ```
